@@ -2,7 +2,7 @@
 # This is a hybrid between a subset and a permutations problem
 # - The valid answers have fixed length (permutations)
 # - Each step chooses to add an element to the partial solution among a set of possible elements (permutations).
-# - However, each step has the same branching factor (subset).
+# - However, each step has the same branching factor (more typical of subset problems).
 
 # from collections.abc import Collection
 from typing import List, Set
