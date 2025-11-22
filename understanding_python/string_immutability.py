@@ -14,6 +14,17 @@ def join_text() -> str:
 
 
 def main():
+	# Concatenation results in a completely new object
+	str_a = "Hello"
+	str_b = "World"
+	print(f"{id(str_a)=}")
+	print(f"{id(str_b)=}")
+
+	str_a += f" {str_b}"
+	print(f"{id(str_a)=}") # This will give us a different id
+
+
+	# Concatenation vs join efficiency
 	print(f"Same result? {append_text() == join_text()}")
 	warm_up: float = timeit(append_text)
 
