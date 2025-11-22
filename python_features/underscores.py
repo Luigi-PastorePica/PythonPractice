@@ -1,4 +1,8 @@
-# As a separator. The interpreter will ignore the underscores, they are there as a visual aid to the developer only.
+"""
+Taken from https://youtu.be/-RgtgHvdYP4?si=U1Q3Kel4UhxYM_op
+"""
+
+#As a separator. The interpreter will ignore the underscores, they are there as a visual aid to the developer only.
 big_number = 1_000_000_000_000
 print(big_number)
 

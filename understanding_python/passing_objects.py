@@ -1,3 +1,16 @@
+"""
+While studying backtracking, I could not quite understand the statement that backtracking, despite being inefficient in
+terms of time, it is quite efficient in terms of memory.
+
+From my experiments, turns out the above is true IFF the partial answer object is mutable (e.g. list) and we pass in the
+partial recursively and modify it within the recursive call. If we pass in an expression that returns a modified version
+of the partial answer (e.g. partial + [original[1]]), then we are generating a new partial answer object on each
+recursive call and the algorithm loses it's memory efficiency advantage.
+
+Please note that if we take the first approach (the memory-efficient one), then we must take care than on return the object
+is reversed to it\'s previous state. if not, the algorithm does not work correctly.
+"""
+
 from typing import List
 
 def recursive(partial: List, idx: int, original: List):

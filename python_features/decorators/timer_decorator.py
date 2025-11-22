@@ -1,3 +1,10 @@
+"""
+How to write a timer decorator
+
+This was taken from an Indently.io video, but I don't remember which one, as I've seen him implement this in three
+different occasions.
+"""
+
 from time import time, sleep
 
 def timer(func):

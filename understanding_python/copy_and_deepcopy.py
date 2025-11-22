@@ -1,4 +1,13 @@
 """
+Explains the difference between
+- copy by assignment,
+- the copy method implemented in builtins like lists, sets, and dictionaries,
+- and the deepcopy function from the copy module
+
+Taken from https://youtu.be/ankki-yKgSc?si=U_KwC2EpoD6o3QOy
+"""
+
+"""
 If you assign a variable pointing to a list to another variable, you only have two variables referencing the same list
 object.
 

@@ -3,6 +3,8 @@ Let's refresh the match-case logic and throw in enumerators.
 Using an Enumerator object provides two benefits:
 - String changes are made in a single place, avoiding potential bugs due to misspelling and simplifying maintenance.
 - Linters, like those in IDE's, catch misspellings of the Enum's attributes.
+
+The idea was taken from this video https://youtube.com/shorts/DxHhJi1UFxM?si=PBw3VjuNj4eXX1jc
 """
 
 from enum import Enum

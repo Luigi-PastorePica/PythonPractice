@@ -1,3 +1,10 @@
+"""
+Strings are immutable. Every concatenation means creating a new string object, even if we are using the += syntactic
+sugar to assign to the same variable.
+
+Taken from https://youtu.be/ankki-yKgSc?si=U_KwC2EpoD6o3QOy
+"""
+
 from timeit import timeit
 
 def append_text() -> str:
