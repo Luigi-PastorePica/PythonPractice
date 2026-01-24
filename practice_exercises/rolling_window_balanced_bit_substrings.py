@@ -1,3 +1,4 @@
+# Source id: 2 # Personal reference.
 # You have a binary string s (a string consisting only of '0's and '1's).
 # Count the number of non-empty substrings that comply with the following:
 # 1. The substring's first half consists of only '1's or only '0's.
