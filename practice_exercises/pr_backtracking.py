@@ -1,4 +1,4 @@
-# Problem taken from Pathrise backtracking workshop.
+# Source id: 1 # Personal Reference.
 # This is a hybrid between a subset and a permutations problem
 # - The valid answers have fixed length (permutations)
 # - Each step chooses to add an element to the partial solution among a set of possible elements (permutations).
