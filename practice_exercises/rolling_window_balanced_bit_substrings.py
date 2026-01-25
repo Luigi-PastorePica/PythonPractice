@@ -34,6 +34,8 @@ def counter(s: str) -> int:
         bit_at_r = s[r]
         if bit_at_l == bit_at_r:
             flip_at = find_next_flip(s, r)
+        else:
+            flip_at = r
         flip_back_at = find_next_flip(s, flip_at)
         r = flip_back_at -1
 
@@ -64,12 +66,36 @@ def find_next_flip(s: str, r: int) -> int:
         r += 1
     return r
 
+def counter2(s: str) -> int:
+    if len(s) < 2:
+        return 0
+    result = 0
+    idx = 0
+    counter_l = 0
+    counter_r = 0
+    starting_bit = s[idx]
+
+    while idx < len(s):
+        while idx < len(s) and s[idx] == starting_bit:
+            counter_r += 1
+            idx += 1
+        result += min(counter_l, counter_r) # On first pass this will be 0
+        counter_l = counter_r
+        counter_r = 0
+        starting_bit = s[idx] if idx < len(s) else None
+
+    return result
+
+
 if __name__ == '__main__':
     import random
 
     string = "00011001" # 0011, 01, 1100, 10, 01; 5 in total
     string2 = "00111001" # 0011, 01, 1100, 10, 01; 5 in total
     very_long_bit_seq = "".join([random.choice(["0", "1"]) for _ in range(int(10e5))])
-    print(counter(string))
-    print(counter(string2))
-    print(counter(very_long_bit_seq))
+    print(f'{counter(string)=}')
+    print(f'{counter2(string)=}')
+    print(f'{counter(string2)=}')
+    print(f'{counter2(string2)=}')
+    print(f'{counter(very_long_bit_seq)=}')
+    print(f'{counter2(very_long_bit_seq)=}')
